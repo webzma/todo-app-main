@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>To Do List</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="title-container">
+        <h1>TODO</h1>
+        <img src="images/icon-moon.svg" alt="" class="icon" />
+      </div>
+      <div class="current-task-container">
+        <div class="current-task">
+          <div class="checkbox" id="btnTask"></div>
+          <input type="text" placeholder="Create a new todo..." id="inputTask" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tasks-container">
+      <div class="tasks">
+        <div class="task">
+          <div class="checkbox checkboxes" id="checkboxTask">
+            <img src="./images/icon-check.svg" alt="checkbox" class="check" />
+          </div>
+          <p id="description">Hacer mi tarea</p>
+          <img src="images/icon-cross.svg" alt="Icono de una equis" class="close" />
+        </div>
+
+        <div class="task">
+          <div class="checkbox checkboxes" id="checkboxTask">
+            <img src="./images/icon-check.svg" alt="checkbox" class="check" />
+          </div>
+          <p id="description">Bañar a mi perrita</p>
+          <img src="images/icon-cross.svg" alt="Icono de una equis" class="close" />
+        </div>
+
+        <div class="task">
+          <div class="checkbox checkboxes" id="checkboxTask">
+            <img src="./images/icon-check.svg" alt="checkbox" class="check" />
+          </div>
+          <p id="description">Hacer ejercicios</p>
+          <img src="images/icon-cross.svg" alt="Icono de una equis" class="close" />
+        </div>
+
+        <div class="task">
+          <div class="checkbox checkboxes" id="checkboxTask">
+            <img src="./images/icon-check.svg" alt="checkbox" class="check" />
+          </div>
+          <p id="description">Hacer mi primer proyecto web</p>
+          <img src="images/icon-cross.svg" alt="Icono de una equis" class="close" />
+        </div>
+      </div>
+
+      <div class="footer-task">
+        <span id="count-items">4 Items left</span>
+        <span id="clear">Clear completed</span>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="all">All</li>
+        <li class="no-completed">Active</li>
+        <li class="completed">Completed</li>
+      </ul>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Drag and drop to reorder list.</p>
+  </footer>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

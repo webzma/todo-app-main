@@ -1,0 +1,254 @@
+:root {
+  /* COLORS 🖌️*/
+
+  /* PRIMARY */
+
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  /* LIGHT THEME 🌄*/
+
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --ligh-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* DARK THEME 🌒 */
+
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue: hsl(237, 14%, 26%);
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  min-width: 320px;
+  background-color: var(--very-light-grayish-blue);
+}
+
+.container {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  padding: 0px 10px;
+}
+
+header {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 255px;
+  background-image: url(../images/bg-desktop-light.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .title-container {
+  width: 100%;
+  margin: 35px 0px 46px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+header .title-container .icon {
+  justify-self: end;
+  cursor: pointer;
+}
+
+header .title-container h1 {
+  margin: 0;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+header .current-task-container {
+  display: grid;
+  place-items: center;
+  margin-bottom: 40px;
+}
+
+header .current-task-container .current-task {
+  width: 94%;
+  background-color: #fff;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 7px 7px 7px 25px;
+}
+
+header .current-task-container .current-task input[type="text"] {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+header .current-task-container .current-task input[type="text"]::placeholder {
+  color: var(--dark-grayish-blue);
+}
+
+main .tasks-container {
+  width: 100%;
+  margin: auto;
+  transform: translateY(-35px);
+  background-color: white;
+  border-radius: 5px;
+}
+
+main .tasks-container .task {
+  border-bottom: 1px solid var(--very-light-grayish-blue);
+  display: flex;
+  align-items: center;
+  padding: 7px 25px 7px 25px;
+}
+
+main .tasks-container .task .close{
+  width: 14px;
+  cursor: pointer;
+}
+
+main .tasks-container .task p {
+  color: var(--very-dark-grayish-blue);
+  flex: 1;
+  margin-left: 7px;
+}
+
+main .tasks-container .footer-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+main .tasks-container .footer-task span {
+  color: var(--dark-grayish-blue);
+  font-size: 13px;
+}
+
+main .tasks-container .footer-task span:last-child {
+  cursor: pointer;
+}
+
+main nav {
+  width: 100%;
+  padding: 5px 0px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+main nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+main nav ul li {
+  color: var(--dark-grayish-blue);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main nav ul li:hover {
+  color: var(--light-grayish-blue-hover);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+footer p {
+  color: var(--dark-grayish-blue);
+}
+
+.checkbox {
+  margin-right: 10px;
+  border: 1px solid var(--very-light-grayish-blue);
+  width: 20px;
+  height: 20px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.checkbox:hover {
+  border: 1px solid;
+  border-color: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.active {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+main .tasks-container .task .subrayar {
+  text-decoration: line-through;
+  color: var(--light-grayish-blue);
+}
+
+.dark {
+  background-color: var(--very-dark-blue);
+}
+
+.dark header .current-task-container .current-task {
+  background-color: var(--very-dark-desaturated-blue);
+}
+
+.dark header .current-task-container .current-task input[type="text"] {
+  background-color: var(--very-dark-desaturated-blue);
+  color: var(--light-grayish-blue);
+}
+
+.dark header .current-task-container .current-task input[type="text"]::placeholder {
+  color: var(--light-grayish-blue);
+}
+
+.dark .checkbox {
+  border-color: var(--dark-grayish-blue);
+}
+
+.dark main .tasks-container {
+  background-color: var(--very-dark-desaturated-blue);
+}
+
+.dark main .tasks-container .task {
+  border-color: var(--very-dark-grayish-blue);
+}
+
+.dark main .tasks-container .task p {
+  color: white;
+}
+
+.dark main nav {
+  background-color: var(--very-dark-desaturated-blue);
+}
+
+main .tasks-container .task .invisible {
+  display: none !important;
+}
+
+.check {
+  opacity: 0;
+}
+
+.checked {
+  opacity: 1;
+}
